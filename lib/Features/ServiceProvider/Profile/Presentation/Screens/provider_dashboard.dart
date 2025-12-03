@@ -1,4 +1,5 @@
 import 'package:fixora/Features/Auth/Presentations/ViewModels/auth_provider.dart';
+import 'package:fixora/Features/ServiceProvider/Profile/Presentation/Screens/provider_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -76,7 +77,7 @@ class _ProviderDashboardState extends State<ProviderDashboard> {
             ? _buildBookingsContent()
             : _selectedIndex == 2
             ? _buildServicesContent()
-            : _buildProfileContent(),
+            : ProviderProfile(),
       ),
       bottomNavigationBar: _buildBottomNav(),
     );
@@ -687,63 +688,6 @@ class _ProviderDashboardState extends State<ProviderDashboard> {
           ),
         ),
       ],
-    );
-  }
-
-  Widget _buildProfileContent() {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          Container(
-            padding: const EdgeInsets.all(20),
-            decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                colors: [Color(0xFF2D3142), Color(0xFF4A5568)],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
-              ),
-            ),
-            child: Column(
-              children: [
-                const CircleAvatar(
-                  radius: 50,
-                  backgroundColor: Color(0xFF4ECDC4),
-                  child: Icon(Icons.person, size: 50, color: Colors.white),
-                ),
-                const SizedBox(height: 16),
-                const Text(
-                  'Service Provider',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.white,
-                  ),
-                ),
-                const SizedBox(height: 8),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Icon(Icons.star, color: Color(0xFFFFB84D), size: 20),
-                    SizedBox(width: 4),
-                    Text('4.8 Rating', style: TextStyle(color: Colors.white70)),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 20),
-          _buildProfileOption(Icons.person_outline, 'Edit Profile'),
-          _buildProfileOption(Icons.business_center_outlined, 'My Services'),
-          _buildProfileOption(
-            Icons.account_balance_wallet_outlined,
-            'Payment Settings',
-          ),
-          _buildProfileOption(Icons.bar_chart_outlined, 'Analytics'),
-          _buildProfileOption(Icons.settings_outlined, 'Settings'),
-          _buildProfileOption(Icons.help_outline, 'Help & Support'),
-          _buildProfileOption(Icons.logout, 'Logout', isLogout: true),
-        ],
-      ),
     );
   }
 
