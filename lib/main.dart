@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 
 void main() {
   runApp(
+    //multiprovider is used to initialize multiple providers
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => AuthProvider()),
