@@ -691,49 +691,6 @@ class _ProviderDashboardState extends State<ProviderDashboard> {
     );
   }
 
-  Widget _buildProfileOption(
-    IconData icon,
-    String title, {
-    bool isLogout = false,
-  }) {
-    return InkWell(
-      onTap: () {},
-      child: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-        decoration: const BoxDecoration(
-          border: Border(
-            bottom: BorderSide(color: Color(0xFFE0E0E0), width: 1),
-          ),
-        ),
-        child: Row(
-          children: [
-            Icon(
-              icon,
-              color: isLogout ? Colors.red : const Color(0xFF8D8D8D),
-              size: 24,
-            ),
-            const SizedBox(width: 16),
-            Expanded(
-              child: Text(
-                title,
-                style: TextStyle(
-                  fontSize: 16,
-                  color: isLogout ? Colors.red : const Color(0xFF2D3142),
-                  fontWeight: FontWeight.w500,
-                ),
-              ),
-            ),
-            Icon(
-              Icons.arrow_forward_ios,
-              size: 16,
-              color: isLogout ? Colors.red : const Color(0xFF8D8D8D),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
   Widget _buildBottomNav() {
     return Container(
       decoration: BoxDecoration(

@@ -1,7 +1,7 @@
 import 'package:fixora/Features/Auth/Presentations/Screens/login_page.dart';
 import 'package:fixora/Features/Auth/Presentations/ViewModels/auth_provider.dart';
-import 'package:fixora/Features/ServiceProvider/Profile/Presentation/Screens/provider_dashboard.dart';
-import 'package:fixora/Features/ServiceSeeker/Profile/Presentation/Screens/seeker_dashboard.dart';
+import 'package:fixora/Features/ServiceProvider/Home/Presentation/Screens/provider_dashboard.dart';
+import 'package:fixora/Features/ServiceSeeker/Home/Presentation/Screens/seeker_dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 

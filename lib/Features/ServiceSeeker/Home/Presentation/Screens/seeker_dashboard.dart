@@ -2,9 +2,9 @@
 
 import 'dart:developer';
 
-import 'package:fixora/Features/ServiceSeeker/Profile/Presentation/Screens/seeker_bookings.dart';
-import 'package:fixora/Features/ServiceSeeker/Profile/Presentation/Screens/seeker_favourite.dart';
-import 'package:fixora/Features/ServiceSeeker/Profile/Presentation/Screens/seeker_home.dart';
+import 'package:fixora/Features/ServiceSeeker/Home/Presentation/Screens/seeker_bookings.dart';
+import 'package:fixora/Features/ServiceSeeker/Home/Presentation/Screens/seeker_favourite.dart';
+import 'package:fixora/Features/ServiceSeeker/Home/Presentation/Screens/seeker_home.dart';
 import 'package:fixora/Features/ServiceSeeker/Profile/Presentation/Screens/seeker_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';

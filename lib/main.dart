@@ -1,6 +1,7 @@
 import 'package:fixora/Core/Widgets/auth_wrapper.dart';
 import 'package:fixora/Core/Widgets/splash_screen.dart';
 import 'package:fixora/Features/Auth/Presentations/ViewModels/auth_provider.dart';
+import 'package:fixora/Features/ServiceProvider/Profile/Presentation/Screens/provider_edit_profile_screen.dart';
 import 'package:fixora/Features/ServiceProvider/Profile/Presentation/ViewModels/service_provider_profile_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/splashscreen': (context) => SplashScreen(),
         '/authwrapper': (context) => AuthWrapper(),
+        '/editprofile': (context) => EditProfileScreen(),
       },
     );
   }
