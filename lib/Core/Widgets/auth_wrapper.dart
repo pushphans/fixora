@@ -1,7 +1,7 @@
-import 'package:fixora/Features/Auth/Presentations/Screens/login_page.dart';
-import 'package:fixora/Features/Auth/Presentations/ViewModels/auth_provider.dart';
-import 'package:fixora/Features/ServiceProvider/Home/Presentation/Screens/provider_dashboard.dart';
-import 'package:fixora/Features/ServiceSeeker/Home/Presentation/Screens/seeker_dashboard.dart';
+import 'package:fixora/Presentation/Screens/login_page.dart';
+import 'package:fixora/Presentation/ViewModels/auth_provider.dart';
+import 'package:fixora/Presentation/Screens/ServiceProvide/provider_dashboard.dart';
+import 'package:fixora/Presentation/Screens/ServiceSeeker/user_dashboard.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -38,7 +38,7 @@ class _AuthWrapperState extends State<AuthWrapper> {
           if (value.accountType == "Service Provider") {
             return const ProviderDashboard();
           } else if (value.accountType == "User") {
-            return const SeekerDashboard();
+            return const UserDashboard();
           } else {
             return const LoginPage();
           }

@@ -1,8 +1,11 @@
 import 'package:fixora/Core/Widgets/auth_wrapper.dart';
 import 'package:fixora/Core/Widgets/splash_screen.dart';
-import 'package:fixora/Features/Auth/Presentations/ViewModels/auth_provider.dart';
-import 'package:fixora/Features/ServiceProvider/Profile/Presentation/Screens/provider_edit_profile_screen.dart';
-import 'package:fixora/Features/ServiceProvider/Profile/Presentation/ViewModels/service_provider_profile_provider.dart';
+import 'package:fixora/Presentation/Screens/login_page.dart';
+import 'package:fixora/Presentation/Screens/sign_up_page.dart';
+import 'package:fixora/Presentation/ViewModels/auth_provider.dart';
+import 'package:fixora/Presentation/Screens/ServiceProvide/provider_edit_profile_screen.dart';
+import 'package:fixora/Presentation/ViewModels/profile_provider.dart';
+import 'package:fixora/Presentation/Screens/ServiceSeeker/user_edit_profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -12,9 +15,7 @@ void main() {
     MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (context) => AuthProvider()),
-        ChangeNotifierProvider(
-          create: (context) => ServiceProviderProfileProvider(),
-        ),
+        ChangeNotifierProvider(create: (context) => ProfileProvider()),
       ],
       child: MyApp(),
     ),
@@ -33,7 +34,11 @@ class MyApp extends StatelessWidget {
       routes: {
         '/splashscreen': (context) => SplashScreen(),
         '/authwrapper': (context) => AuthWrapper(),
-        '/editprofile': (context) => EditProfileScreen(),
+
+        '/login': (context) => LoginPage(),
+        '/signup': (context) => SignUpPage(),
+        '/providereditprofile': (context) => EditProfileScreen(),
+        '/usereditprofile': (context) => EditUserProfileScreen(),
       },
     );
   }
