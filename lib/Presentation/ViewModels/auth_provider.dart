@@ -1,5 +1,5 @@
-import 'package:fixora/Data/Models/register_request_model.dart';
-import 'package:fixora/Data/Services/auth_service.dart';
+import 'package:fixora/Data/Models/AuthModels/register_request_model.dart';
+import 'package:fixora/Domain/Respositories/auth_service.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -12,6 +12,7 @@ class AuthProvider extends ChangeNotifier {
   bool isLoading = false;
   bool isLoggedIn = false;
   bool hasProfile = false;
+  bool isPasswordChanged = false;
   String? accountType;
   String? error;
 
@@ -69,7 +70,6 @@ class AuthProvider extends ChangeNotifier {
   // -------------------------
   Future<void> authCheck() async {
     isLoading = true;
-    notifyListeners();
 
     final ok = await _service.authCheck();
 
@@ -109,5 +109,36 @@ class AuthProvider extends ChangeNotifier {
 
     isSignUpLoading = false;
     notifyListeners();
+  }
+
+  // -------------------------
+  // RESET PASSWORD FUNCTION
+  // -------------------------
+
+  Future<void> changePassword(
+    String currentPassword,
+    String newPassword,
+    String confirmNewPassword,
+  ) async {
+    isLoading = true;
+    notifyListeners();
+    try {
+      final result = await _service.changePassword(
+        currectPassword: currentPassword,
+        newPassword: newPassword,
+        confirmNewPassword: confirmNewPassword,
+      );
+
+      if (result == true) {
+        isPasswordChanged = true;
+      } else {
+        isPasswordChanged = false;
+      }
+    } catch (e) {
+      isPasswordChanged = false;
+    } finally {
+      isLoading = false;
+      notifyListeners();
+    }
   }
 }

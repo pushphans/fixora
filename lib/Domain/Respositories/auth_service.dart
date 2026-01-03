@@ -4,8 +4,9 @@ import 'dart:developer';
 
 import 'package:dio/dio.dart';
 import 'package:fixora/Core/Widgets/auth_dio.dart';
-import 'package:fixora/Data/Models/login_response_model.dart';
-import 'package:fixora/Data/Models/register_request_model.dart';
+import 'package:fixora/Core/Widgets/general_dio.dart';
+import 'package:fixora/Data/Models/AuthModels/login_response_model.dart';
+import 'package:fixora/Data/Models/AuthModels/register_request_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:uuid/uuid.dart';
 
@@ -92,6 +93,35 @@ class AuthService {
     //   log("Error logging out $e");
     //   return false;
     // }
+  }
+
+  //CHANGE PASSWORD
+  Future<bool> changePassword({
+    required String currectPassword,
+    required String newPassword,
+    required String confirmNewPassword,
+  }) async {
+    final dio = await getGeneralDio();
+
+    try {
+      final response = await dio.post(
+        "/Auth/change-password",
+        data: {
+          "currentPassword": currectPassword,
+          "newPassword": newPassword,
+          "confirmNewPassword": confirmNewPassword,
+        },
+      );
+
+      if (response.statusCode == 200) {
+        return true;
+      } else {
+        return false;
+      }
+    } catch (e) {
+      log("Error changing password");
+      return false;
+    }
   }
 
   //AUTH CHECK

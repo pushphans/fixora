@@ -1,6 +1,6 @@
 // ignore_for_file: use_build_context_synchronously
 
-import 'package:fixora/Data/Models/register_request_model.dart';
+import 'package:fixora/Data/Models/AuthModels/register_request_model.dart';
 import 'package:fixora/Presentation/ViewModels/auth_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -41,7 +41,7 @@ class _SignUpPageState extends State<SignUpPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xfff7f6f6),
+      backgroundColor: Colors.white,
 
       body: SafeArea(
         child: SingleChildScrollView(
@@ -51,14 +51,18 @@ class _SignUpPageState extends State<SignUpPage> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                SizedBox(height: 24),
+
                 /// LOGO
                 Center(
                   child: Image.asset(
                     "assets/appicon.png",
-                    width: 180,
+                    width: 150,
                     fit: BoxFit.cover,
                   ),
                 ),
+
+                SizedBox(height: 20),
 
                 /// TITLE
                 const Text(
@@ -246,7 +250,7 @@ class _SignUpPageState extends State<SignUpPage> {
                               RegisterRequestModel(
                                 firstName: firstNameController.text.trim(),
                                 lastName: lastNameController.text.trim(),
-                                username: phoneController.text.trim(),
+                                phoneNumber: phoneController.text.trim(),
                                 email: emailController.text.trim(),
                                 password: passwordController.text.trim(),
                                 confirmPassword: confirmPasswordController.text

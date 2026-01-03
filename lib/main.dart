@@ -1,6 +1,6 @@
-import 'package:fixora/Core/Widgets/auth_wrapper.dart';
 import 'package:fixora/Core/Widgets/splash_screen.dart';
 import 'package:fixora/Presentation/Screens/login_page.dart';
+import 'package:fixora/Presentation/Screens/settings_page.dart';
 import 'package:fixora/Presentation/Screens/sign_up_page.dart';
 import 'package:fixora/Presentation/ViewModels/auth_provider.dart';
 import 'package:fixora/Presentation/Screens/ServiceProvide/provider_edit_profile_screen.dart';
@@ -30,15 +30,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
 
-      initialRoute: '/splashscreen',
+      home: SplashScreen(),
       routes: {
-        '/splashscreen': (context) => SplashScreen(),
-        '/authwrapper': (context) => AuthWrapper(),
-
         '/login': (context) => LoginPage(),
         '/signup': (context) => SignUpPage(),
         '/providereditprofile': (context) => EditProfileScreen(),
         '/usereditprofile': (context) => EditUserProfileScreen(),
+        '/settings': (context) => SettingsPage(),
       },
     );
   }

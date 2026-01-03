@@ -29,7 +29,7 @@ class _GeneralDrawerState extends State<GeneralDrawer> {
                 child: CircleAvatar(
                   backgroundImage: AssetImage("assets/appicon.png"),
                   backgroundColor: Color(0xfff77d24),
-                  radius: 60,
+                  radius: 55,
                 ),
               ),
             ),
@@ -37,6 +37,17 @@ class _GeneralDrawerState extends State<GeneralDrawer> {
             Expanded(
               child: ListView(
                 children: [
+                  ListTile(
+                    iconColor: Colors.white,
+                    textColor: Colors.white,
+                    title: Text("Settings"),
+                    leading: Icon(Icons.settings),
+                    onTap: () {
+                      Navigator.pop(context);
+                      Navigator.pushNamed(context, "/settings");
+                    },
+                  ),
+
                   ListTile(
                     iconColor: Colors.white,
                     textColor: Colors.white,

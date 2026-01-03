@@ -2,8 +2,8 @@ import 'dart:developer';
 
 import 'package:dio/dio.dart';
 import 'package:fixora/Core/Widgets/general_dio.dart';
-import 'package:fixora/Presentation/Screens/ServiceProvide/profile_request_model.dart';
-import 'package:fixora/Presentation/Screens/ServiceProvide/profile_response_model.dart';
+import 'package:fixora/Data/Models/profile_request_model.dart';
+import 'package:fixora/Data/Models/profile_response_model.dart';
 
 class ProfileService {
   Future<ProfileResponseModel?> getProviderPersonalProfile() async {

@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 class RegisterRequestModel {
-  String username;
+  String phoneNumber;
   String email;
   String firstName;
   String lastName;
@@ -10,7 +10,7 @@ class RegisterRequestModel {
   String accountType;
 
   RegisterRequestModel({
-    required this.username,
+    required this.phoneNumber,
     required this.email,
     required this.firstName,
     required this.lastName,
@@ -20,17 +20,15 @@ class RegisterRequestModel {
   });
 
   RegisterRequestModel copyWith({
-    String? username,
+    String? phoneNumber,
     String? email,
     String? firstName,
     String? lastName,
     String? password,
     String? confirmPassword,
     String? accountType,
-    String? long,
-    String? lat,
   }) => RegisterRequestModel(
-    username: username ?? this.username,
+    phoneNumber: phoneNumber ?? this.phoneNumber,
     email: email ?? this.email,
     firstName: firstName ?? this.firstName,
     lastName: lastName ?? this.lastName,
@@ -46,7 +44,7 @@ class RegisterRequestModel {
 
   factory RegisterRequestModel.fromMap(Map<String, dynamic> json) =>
       RegisterRequestModel(
-        username: json["username"] as String,
+        phoneNumber: json["phoneNumber"] as String,
         email: json["email"] as String,
         firstName: json["firstName"] as String,
         lastName: json["lastName"] as String,
@@ -56,7 +54,7 @@ class RegisterRequestModel {
       );
 
   Map<String, dynamic> toMap() => {
-    "username": username,
+    "phoneNumber": phoneNumber,
     "email": email,
     "firstName": firstName,
     "lastName": lastName,

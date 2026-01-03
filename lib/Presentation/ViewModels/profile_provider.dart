@@ -1,6 +1,6 @@
-import 'package:fixora/Data/Services/profile_service.dart';
-import 'package:fixora/Presentation/Screens/ServiceProvide/profile_request_model.dart';
-import 'package:fixora/Presentation/Screens/ServiceProvide/profile_response_model.dart';
+import 'package:fixora/Domain/Respositories/profile_service.dart';
+import 'package:fixora/Data/Models/profile_request_model.dart';
+import 'package:fixora/Data/Models/profile_response_model.dart';
 import 'package:flutter/material.dart';
 
 class ProfileProvider extends ChangeNotifier {

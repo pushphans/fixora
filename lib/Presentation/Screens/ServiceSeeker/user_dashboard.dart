@@ -1,7 +1,7 @@
 import 'package:fixora/Core/Widgets/general_drawer.dart';
 import 'package:fixora/Presentation/Screens/ServiceSeeker/user_bookings.dart';
 import 'package:fixora/Presentation/Screens/ServiceSeeker/user_home.dart';
-import 'package:fixora/Presentation/Screens/ServiceSeeker/user_services.dart';
+import 'package:fixora/Domain/Respositories/user_services.dart';
 import 'package:fixora/Presentation/Screens/ServiceSeeker/user_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

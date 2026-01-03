@@ -1,7 +1,7 @@
 import 'dart:developer';
 import 'package:dio/dio.dart';
 import 'package:fixora/Core/Utils/utils.dart';
-import 'package:fixora/Data/Services/auth_service.dart';
+import 'package:fixora/Domain/Respositories/auth_service.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 Future<Dio> getGeneralDio() async {

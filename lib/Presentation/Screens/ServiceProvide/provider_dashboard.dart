@@ -1,7 +1,7 @@
 import 'package:fixora/Core/Widgets/general_drawer.dart';
 import 'package:fixora/Presentation/Screens/ServiceProvide/provider_bookings.dart';
 import 'package:fixora/Presentation/Screens/ServiceProvide/provider_home.dart';
-import 'package:fixora/Presentation/Screens/ServiceProvide/provider_services.dart';
+import 'package:fixora/Domain/Respositories/provider_services.dart';
 import 'package:fixora/Presentation/Screens/ServiceProvide/provider_profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
