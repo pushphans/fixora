@@ -1,16 +1,24 @@
 # fixora
 
-A new Flutter project.
+A modern Flutter-based mobile application project focused on building a polished user experience.
+
+## Overview
+This repository showcases a clean app structure and practical Flutter frontend development. It is designed to be easy to understand, extend, and present as part of a professional portfolio.
+
+## Key Features
+- Modern UI implementation
+- Clean and responsive app layout
+- Simple project structure for learning and expansion
+- Flutter development practice project
+
+## Tech Stack
+- Flutter
+- Dart
 
 ## Getting Started
+1. Clone the repository
+2. Install dependencies
+3. Run the app on your device or emulator
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Contact
+For questions or collaboration, reach out to @pushphans.
